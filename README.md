@@ -1,2 +1,2 @@
-# Clinica_Dentaria
-Aplica√ß√£o para gest√£o de marca√ß√µes de cl√≠nica dent√°ria.
+"# Cl°nica Dental" 
+"Aplicaá∆o para gest∆o de marcaá‰es de cl°nica dent†ria." 
