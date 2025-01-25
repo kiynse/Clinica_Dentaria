@@ -1,6 +1,5 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../Config/database');
-const bcrypt = require('bcryptjs');
 
 const Dentista = sequelize.define('Dentista', {
     nome: {
@@ -31,10 +30,5 @@ const Dentista = sequelize.define('Dentista', {
     },
 });
 
-Dentista.beforeSave(async (Dentista, options) => {
-    if (Dentista.senha) {
-        Dentista.senha = await bcrypt.hash(Dentista.senha, 10);  // Encripta a senha
-    }
-  });
 
 module.exports = Dentista;

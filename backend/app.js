@@ -15,6 +15,7 @@ const Notificacao = require('./src/Models/Notificacao');
 //Importações das Routes
 const pacienteRoutes = require('./src/Routes/PacienteRoutes');
 const authRoutes = require('./src/Routes/authRoutes');
+const DentistaRoutes = require('./src/Routes/DentistaRoutes');
 
 // Inicializando dotenv
 dotenv.config();
@@ -61,6 +62,7 @@ sequelize.sync({ alter: true })
 // Usando as rotas de pacientes
 app.use('/pacientes', pacienteRoutes);
 app.use('/auth', authRoutes);
+app.use('/dentistas', DentistaRoutes);
 
 // Definindo a porta
 const PORT = process.env.PORT || 3000;
