@@ -7,7 +7,7 @@ const { checkToken } = require('../Middleware/authMiddleware');
 router.post('/', PacienteController.criarPaciente);
 
 // Rota para listar pacientes
-router.get('/', PacienteController.listarPacientes);
+router.get('/', checkToken, PacienteController.listarPacientes);
 
 // Rota para atualizar um paciente
 router.put('/:id', PacienteController.atualizarPaciente);

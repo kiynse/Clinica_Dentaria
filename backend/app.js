@@ -50,7 +50,7 @@ Notificacao.belongsTo(Paciente, { foreignKey: 'pacienteId', allowNull: true });
 Notificacao.belongsTo(Dentista, { foreignKey: 'dentistaId', allowNull: true });
 
 // Sincronizando as tabelas
-sequelize.sync({ force: true })
+sequelize.sync({ alter: true })
   .then(() => {
     console.log('Banco de dados sincronizado!');
   })
