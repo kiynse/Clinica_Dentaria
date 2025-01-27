@@ -1,0 +1,63 @@
+/* src/Style/Slider.css */
+
+/* Centraliza o slider e ajusta sua largura */
+.slider-container {
+    width: 80%; /* Ajuste conforme necessário */
+    margin: 0 auto; /* Isso centraliza o slider na tela */ 
+    position: relative; /* Necessário para o posicionamento dos botões de navegação */
+}
+
+/* Estilizando os slides */
+.slick-slide {
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+}
+
+/* Estilizando as imagens para o slider */
+.slick-slide img {
+    max-width: 100%; /* Garante que a imagem ocupe 100% da largura disponível */
+    height: 600px; /* Definindo a altura do slider */
+    object-fit: cover; /* Isso garante que a imagem seja cortada proporcionalmente, se necessário */   
+    display: block; /* Isso remove qualquer espaço abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+/* Estilizando os botões de navegação (anterior e próximo) */
+.slick-prev,
+.slick-next {
+    background-color: #03b1b4; /* Cor de fundo dos botões */
+    color: white; /* Cor dos ícones de navegação */
+    border-radius: 50%; /* Botões circulares */
+    padding: 10px; /* Ajuste o tamanho do botão */
+    font-size: 24px; /* Tamanho do ícone de navegação */
+    z-index: 1; /* Garantir que os botões fiquem sobre as imagens */
+}
+
+.slick-prev {
+    left: 0; /* Botão "anterior" à esquerda */
+}
+
+.slick-next {
+    right: 0; /* Botão "próximo" à direita */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: #4cae4c; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilizando os pontos de navegação */
+.slick-dots {
+    bottom: 10px; /* Posicionando os pontos na parte inferior do slider */
+}
+
+.slick-dots li button:before {
+    font-size: 12px; /* Ajustando o tamanho dos pontos */
+    color: white; /* Cor dos pontos */
+}
+
+/* Adicionando o hover nos pontos */
+.slick-dots li.slick-active button:before {
+    color: #03b1b4; /* Cor do ponto ativo */
+}
