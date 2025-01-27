@@ -19,10 +19,17 @@ const CustomNextArrow = ({ className, style, onClick }) => {
   return (
     <div
       className={className}
-      style={{ ...style, display: 'block', background: '#03b1b4', borderRadius: '50%' }}
+      style={{
+        ...style,
+        display: 'block',
+        background: '#03b1b4',
+        borderRadius: '50%',
+        padding: '10px',
+        color: 'white',
+        zIndex: '2',  // Garantindo que o botão fique acima das imagens
+      }}
       onClick={onClick}
     >
-      ➡
     </div>
   );
 };
@@ -32,10 +39,17 @@ const CustomPrevArrow = ({ className, style, onClick }) => {
   return (
     <div
       className={className}
-      style={{ ...style, display: 'block', background: '#03b1b4', borderRadius: '50%' }}
+      style={{
+        ...style,
+        display: 'block',
+        background: '#03b1b4',
+        borderRadius: '50%',
+        padding: '10px',
+        color: 'white',
+        zIndex: '2',  // Garantindo que o botão fique acima das imagens
+      }}
       onClick={onClick}
     >
-      ⬅
     </div>
   );
 };
