@@ -11,11 +11,13 @@ const Dentista = require('./src/Models/Dentista');
 const Agendamento = require('./src/Models/Agendamento');
 const Consulta = require('./src/Models/Consulta');
 const Notificacao = require('./src/Models/Notificacao');
+const Tratamento = require('./src/Models/Tratamento');
 
 //Importações das Routes
 const pacienteRoutes = require('./src/Routes/PacienteRoutes');
 const authRoutes = require('./src/Routes/authRoutes');
 const DentistaRoutes = require('./src/Routes/DentistaRoutes');
+const TratamentoRoutes = require('./src/Routes/TratamentoRoutes');
 
 // Inicializando dotenv
 dotenv.config();
@@ -63,6 +65,7 @@ sequelize.sync({ alter: true })
 app.use('/pacientes', pacienteRoutes);
 app.use('/auth', authRoutes);
 app.use('/dentistas', DentistaRoutes);
+app.use('/Tratamento', TratamentoRoutes);
 
 // Definindo a porta
 const PORT = process.env.PORT || 3000;
